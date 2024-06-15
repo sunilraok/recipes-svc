@@ -1,5 +1,7 @@
 FROM mcr.microsoft.com/openjdk/jdk:21-ubuntu
 
+WORKDIR /home/app-user
+
 RUN mkdir /opt/app
 COPY docker/app.jar /opt/app/app.jar
 COPY --chown=app-user:app-user docker/app.yml /opt/app/
